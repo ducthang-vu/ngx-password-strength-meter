@@ -1,6 +1,6 @@
 import { NgxPasswordStrengthMeterService } from './ngx-password-strength-meter.service';
 import { SimpleChange } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 import { NgxPasswordStrengthMeter } from './ngx-password-strength-meter.component';
@@ -10,7 +10,7 @@ describe('NgxPasswordStrengthMeterComponent', () => {
   let fixture: ComponentFixture<NgxPasswordStrengthMeter>;
   let ngxPasswordStrengthMeterServiceSpy;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     ngxPasswordStrengthMeterServiceSpy = jasmine.createSpyObj('NgxPasswordStrengthMeterService', [
       'calculate',
     ]);
@@ -24,7 +24,7 @@ describe('NgxPasswordStrengthMeterComponent', () => {
         },
       ],
     }).compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(NgxPasswordStrengthMeter);
